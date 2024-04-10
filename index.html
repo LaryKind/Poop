@@ -4,19 +4,65 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Библиотека фильмов</title>
+
+   <!--задаю фавиконки для браузера, мобилок и пк
+    беру иконку от дизайнера в svg и отрпавляюсь на генератор фавиконок
+    https://realfavicongenerator.net
+    там уже можно настроить размеры, фон и отображение
+    там же выдаётся код для hrml, что экономит время-->
+    <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
+    <link rel="manifest" href="icon/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#00aba9">
+    <meta name="theme-color" content="#ffffff">
+
+    <style>
+        details > summary {
+        cursor: pointer;
+        list-style: none;
+    }
+
+    summary::-webkit-details-marker {
+    display: none
+    }
+
+    summary::after {
+    content: ' ►';
+    }
+    details[open] summary:after {
+    content: " ▼";
+    }
+ 
+    details > div {
+        border: 1px #ccc solid;
+        padding: 10px;
+    }
+    details[open] > summary {
+        width: 200px;
+        height: 50px;
+        font-weight: 400;
+        color: black; 
+        background-color: white;
+        padding: 0;
+    }
+    </style>
+    
+
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
         <div class="header_main"> <!--контейнер Хедера -->
-            <div class="header_wrapper"> 
-                <div class="header_logo">Библиотека фильмов</div> <!--Логотип, или название сайта -->
+            <div class="header_wrapper">  <!--Логотип, или название сайта -->
+                <div class="header_logo">Библиотека фильмов</div> 
                 <div class="header_search"> 
-                    <form class="form_search" action="#">
+                    <form action="#">
+                        <div class="input_box">
                             <input class="input_search" type="search" placeholder="Поиск фильмов"/> 
-                            <button type="submit" class="search_button">
-                                <img src="image.jpg" alt="" class="search_icon" width=12px; height=12px;>
-                            </button>
+                            <button type="submit" class="search_button"></button> <!--кнопку надо превратить в картинку лупы  -->
+                        </div>
                     </form>
                 </div>
                 <div class="header_profile"> <!-- окно "Войти в профиль" Пытался сделать всплывающим (модальным) окном, не получилось
@@ -30,5 +76,162 @@
     <footer class="footer">FOOTER</footer>
 </div>
 <script src="script.js"></script>
+
+<div class="menu">
+    <div class="title_menu"><h2>Фильмы</h2></div>
+    <div class="list_menu">
+
+        <details class="details">
+            <summary>
+                Жанры
+            </summary>
+            <input type="checkbox" id="biography" name="genres">
+            <label for="biography">Биография</label>
+            <br>
+            <input type="checkbox" id="action_film" name="genreses">
+            <label for="action_film">Боевик</label>
+            <br>
+            <input type="checkbox" id="western_film" name="genres">
+            <label for="western_film">Вестерн</label>
+            <br>
+            <input type="checkbox" id="war_film" name="genres">
+            <label for="war_film">Военный</label>
+            <br>
+            <input type="checkbox" id="detective_movies" name="genres">
+            <label for="detective_movies">Детектив</label>
+            <br>
+            <input type="checkbox" id="drama" name="genres">
+            <label for="drama">Драма</label>
+            <br>
+            <input type="checkbox" id="historical_film" name="genres">
+            <label for="historical_film">История</label>
+            <br>
+            <input type="checkbox" id="comedy" name="genres">
+            <label for="comedy">Комедия</label>
+            <br>
+            <input type="checkbox" id="crime_film" name="genres">
+            <label for="crime_film">Криминал</label>
+            <br>
+            <input type="checkbox" id="romance" name="genres">
+            <label for="romance">Мелодрама</label>
+            <br>
+            <input type="checkbox" id="" name="genres">
+            <label for="cartoon">Мультфильм</label>
+            <br>
+            <input type="checkbox" id="music" name="genres">
+            <label for="music">Музыка</label>
+            <br>
+            <input type="checkbox" id="musical" name="genres">
+            <label for="musical">Мюзикл</label>
+            <br>
+            <input type="checkbox" id="adventure" name="genres">
+            <label for="adventure">Приключения</label>
+            <br>
+            <input type="checkbox" id="family" name="genres">
+            <label for="family">Семейное</label>
+            <br>
+            <input type="checkbox" id="sport" name="genres">
+            <label for="sport">Спорт</label>
+            <br>
+            <input type="checkbox" id="thriller" name="genres">
+            <label for="thriller">Триллер</label>
+            <br>
+            <input type="checkbox" id="horror" name="genres">
+            <label for="horror">Ужасы</label>
+            <br>
+            <input type="checkbox" id="science_fiction" name="genres">
+            <label for="science_fiction">Фантастика</label>
+            <br>
+            <input type="checkbox" id="fantasy" name="genres">
+            <label for="fantasy">Фэнтези</label>
+        </details>
+    
+        <details class="details">
+            <summary>
+                Страны
+            </summary>
+            <input type="checkbox" id="russia" name="countries">
+            <label for="russia">Россия</label>
+            <br>
+            <input type="checkbox" id="usa" name="countries">
+            <label for="usa">США</label>
+            <br>
+            <input type="checkbox" id="uk" name="countries">
+            <label for="uk">Великобритания</label>
+            <br>
+            <input type="checkbox" id="france" name="countries">
+            <label for="france">Франция</label>
+            <br>
+            <input type="checkbox" id="canada" name="countries">
+            <label for="canada">Канада</label>
+            <br>
+            <input type="checkbox" id="italy" name="countries">
+            <label for="italy">Италия</label>
+            <br>
+            <input type="checkbox" id="turky" name="countries">
+            <label for="turky">Турция</label>
+        </details> 
+    
+        <details class="details">
+            <summary>
+                Годы
+            </summary>
+            <input type="checkbox" id="70th" name="decade">
+            <label for="70th">1970-1979</label>
+            <br>
+            <input type="checkbox" id="80th" name="decade">
+            <label for="80th">1980-1989</label>
+            <br>
+            <input type="checkbox" id="90th" name="decade">
+            <label for="90th">1990-1999</label>
+            <br>
+            <input type="checkbox" id="00th" name="decade">
+            <label for="four">2000-2009</label>
+            <br>
+            <input type="checkbox" id="10th" name="decade">
+            <label for="10th">2010-2019</label>
+            <br>
+            <input type="checkbox" id="20th" name="decade">
+            <label for="20th">2020-2029</label>
+        </details> 
+    
+        <details class="details">
+            <summary>
+                Рейтинг 
+            </summary>
+            <input type="checkbox" id="one" name="estimate">
+            <label for="one">1</label>
+            <br>
+            <input type="checkbox" id="two" name="estimate">
+            <label for="two">2</label>
+            <br>
+            <input type="checkbox" id="three" name="estimate">
+            <label for="three">3</label>
+            <br>
+            <input type="checkbox" id="four" name="estimate">
+            <label for="four">4</label>
+            <br>
+            <input type="checkbox" id="five" name="estimate">
+            <label for="five">5</label>
+            <br>
+            <input type="checkbox" id="six" name="estimate">
+            <label for="six">6</label>
+            <br>
+            <input type="checkbox" id="seven" name="estimate">
+            <label for="seven">7</label>
+            <br>
+            <input type="checkbox" id="eight" name="estimate">
+            <label for="eight">8</label>
+            <br>
+            <input type="checkbox" id="nine" name="estimate">
+            <label for="nine">9</label>
+            <br>
+            <input type="checkbox" id="ten" name="estimate">
+            <label for="ten">10</label>
+        </details>
+
+    </div>
+</div>
+
 </body>
 </html>
