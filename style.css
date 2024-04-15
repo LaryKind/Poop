@@ -111,3 +111,96 @@ button {
     box-sizing: border-box;
     text-decoration: none;
 }
+
+/*менюшка с категориями*/
+/*заголовок менюшки*/
+.title_menu h2 {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 400;
+    margin-bottom: 10px;
+    margin-left: 100px;
+    color: black;
+}
+
+.menu {
+    height: 1500px;
+    position: relative;
+}
+
+.list_menu {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 400;
+    color: black;
+}
+
+/*faq*/
+.faq {
+    width: 400px;
+    height: 50px;
+    margin: 0;
+}
+
+.faq-item {
+    border: 1px solid yellowgreen;
+    background-color: #31966C;
+    font-size: 400;
+    color: black;
+}
+
+/*заголовок*/
+.faq-title {
+    display: block;
+    position: relative;
+    /*margin: 20px 25px;*/
+    padding: 20px 150px;
+    font-size: 400;
+    color: #fff;
+    cursor: pointer;
+    transition: background .4s ease-out;
+}
+
+.faq-title:hover {
+    background-color: yellowgreen;
+}
+
+.faq-title:after {
+    content: "";
+    display: block;
+    border-style: solid;
+    border-width: 8px 5px 0 5px;
+    border-color: black transparent transparent transparent;
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+}
+
+/*текст*/
+.faq-text {
+    display: none;
+    color: black;
+    size: 300;
+}
+
+/*наша кнопка*/
+.faq-input {
+    width: 0;
+    height: 0;
+    -webkit-appearance: none;
+    appearance: none;
+    position: absolute;
+}
+
+.faq-input:checked ~ .faq-text {
+    display: block;
+}
+
+.faq-input:checked ~ .faq-title::after {
+    border-style: solid;
+    border-width: 0 5px 8px 5px;
+    border-color: transparent transparent black transparent;
+}
+
+.faq-input:checked ~ .faq-text {
+    display: block;
+}
