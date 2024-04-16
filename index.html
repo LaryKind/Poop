@@ -6,36 +6,41 @@
     <title>Библиотека фильмов</title>
 
     <!--задаю фавиконки для браузера, мобилок и пк
-    беру иконку от дизайнера в svg и отрпавляюсь на генератор фавиконок
+    беру иконку от дизайнера в svg и отправляю на генератор фавиконок
     https://realfavicongenerator.net
     там уже можно настроить размеры, фон и отображение
-    там же выдаётся код для hrml, что экономит время-->
+    там же выдаётся код для html, что экономит время-->
     <link rel="apple-touch-icon" sizes="180x180" href="icon/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="icon/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="icon/favicon-16x16.png">
     <link rel="manifest" href="icon/site.webmanifest">
     <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" rel="stylesheet">
     <meta name="msapplication-TileColor" content="#00aba9">
     <meta name="theme-color" content="#ffffff">
-    
+
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header class="header">
-        <div class="header_logo">Библиотека фильмов</div> <!--Логотип, или название сайта -->
+        <div class="header_logo">
+            <img src="logo.png">
+        </div>
+        <div class="header_name_site">Библиотека фильмов</div> <!--Логотип, или название сайта -->
         <div class="header_search">
             <input class="input_search" type="search" placeholder="Поиск фильма.." />
             <button type="submit" class="search_button">
                 <img src="image.jpg" alt="" class="search_icon" width=16px; height=16px;>
             </button>
         </div>
+        <!-- Кнопка триггер "Войти в профиль"-->
         <div class="header_profile">
             <!-- окно "Войти в профиль" Пытался сделать всплывающим (модальным) окном, не получилось
             в итоге оставил только кнопку(ссылку) -->
             <a class="login-trigger" href="#" data-target="#login" data-toggle="modal">Войти в профиль</a>
         </div>
     </header>
-    <main class="main">MAIN
+    <main class="main">
         <div class="menu">
             <div class="title_menu"><h2>Фильмы</h2></div>
             <div class="list_menu">
@@ -107,7 +112,7 @@
                             </p>
                         </div>
                     </div>
-        
+
                     <div class="faq-item">
                         <input class="faq-input" type="checkbox" name="faq_2" id="faq_2">
                         <label class="faq-title" for="faq_2">Страны</label>
@@ -136,7 +141,7 @@
                             </p>
                         </div>
                     </div>
-        
+
                     <div class="faq-item">
                         <input class="faq-input" type="checkbox" name="faq_3" id="faq_3">
                         <label class="faq-title" for="faq_3">Годы</label>
@@ -162,7 +167,7 @@
                             </p>
                         </div>
                     </div>
-        
+
                     <div class="faq-item">
                         <input class="faq-input" type="checkbox" name="faq_4" id="faq_4">
                         <label class="faq-title" for="faq_4">Рейтинг</label>
@@ -200,12 +205,26 @@
                             </p>
                         </div>
                     </div>
-        
+
                 </div>
             </div>
         </div>
     </main>
-    <footer class="footer">FOOTER</footer>
+    <footer class="footer">
+        <div class="row">
+            <ul>
+                <li><a href="#">Свяжитесь с нами</a></li>
+                <li><a href="#">Наши сервисы</a></li>
+                <li><a href="#">Политика конфидициальности</a></li>
+                <li><a href="#">Правила и условия</a></li>
+                <li><a href="#">Работа</a></li>
+            </ul>
+        </div>
+
+        <div class="row">
+            Poop Copyright © 2024 Poop - Все права защищены || Разработано: 4.4_TulaHack.W&M
+        </div>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
