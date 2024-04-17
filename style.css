@@ -114,6 +114,17 @@ button {
     text-decoration: none;
 }
 
+/* Имя пользователя и кнопка "выйти из аккаунта" */
+.user-info {
+    margin-right: 10px;
+    color: yellowgreen;
+    font-weight: bold; 
+}
+
+.logout {
+    margin-right: 10px;
+}
+
 /* MAIN */
 
 /* Меню с категориями */
@@ -209,6 +220,24 @@ button {
         display: block;
     }
 
+.container {
+    display: flex;
+}
+
+.movies-column {
+    flex: 1;
+}
+
+.filters-column {
+    width: 250px; 
+    margin-left: 20px;
+}
+
+.movie-item img {
+    width: 150px;
+    height: auto;
+    margin-right: 10px;
+}
 
 /* FOOTER */
 
